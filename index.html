@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite App</title>
+</head>
+
+<body>
+  <div class="container | bg-neutral-400 padding-200 font-family">
+
+    <div class="box-area">
+      <div class="upper-box | padding-500 padding-inline-400 text-neutral-100 bg-primary-100">
+
+        <div class="my-balance">
+          <h3 class="balance-title | fs-400 fw-400">My balance</h3>
+          <p class="balance-value | fs-900 fw-700">$921.48</p>
+        </div>
+
+        <div class="logo">
+          <img src="images/logo.svg" alt="">
+        </div>
+
+      </div>
+
+      <div class="lower-box | padding-400 text-neutral-900 bg-neutral-100">
+
+        <h3 class="balance-spending | fs-600">Spending - Last 7 days</h3>
+
+        <div class="balance-chart">
+          <canvas id="myChart"></canvas>
+          <hr>
+        </div>
+
+        <div class="upper-box total-box |">
+
+          <div class="my-balance">
+            <h3 class="balance-title | fs-400 fw-400 text-neutral-600">Total this month</h3>
+            <p class="balance-value  | fs-900 fw-700">$478.33</p>
+          </div>
+
+          <div class="result">
+            <h4 class="text-align-right fw-700">+2.4%</h4>
+            <p class="fw-400 text-neutral-600">from last month</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="chart.js"></script>
+</body>
+
+</html>
