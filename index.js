@@ -29,10 +29,24 @@ const myChart = new Chart(ctx, {
     },
     options: {
         scales: {
+            // Remove X-axis lines
+            x: {
+                display: false,
+            },
+            // Remove Y-axis lines
             y: {
+                display: false,
                 beginAtZero: true
             }
-        }
+        },
+        // Change the cursor to pointer on hover but if the bar is of length == 0 then it doesnt change
+        onHover: (event, chartElement) => {
+			if (chartElement.length === 0) {
+				event.native.target.style.cursor = "default";
+			} else {
+				event.native.target.style.cursor = "pointer";
+			}
+		},
     }
 });
 
