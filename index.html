@@ -30,9 +30,30 @@
         <h3 class="balance-spending | fs-600">Spending - Last 7 days</h3>
 
         <div class="balance-chart">
-          <canvas id="myChart">
-            <script>
-              const ctx = document.getElementById('myChart').getContext('2d');
+          <canvas id="myChart"></canvas>
+          <hr>
+        </div>
+
+        <div class="upper-box total-box |">
+
+          <div class="my-balance">
+            <h3 class="balance-title | fs-400 fw-400 text-neutral-600">Total this month</h3>
+            <p class="balance-value  | fs-900 fw-700">$478.33</p>
+          </div>
+
+          <div class="result">
+            <h4 class="text-align-right fw-700">+2.4%</h4>
+            <p class="fw-400 text-neutral-600">from last month</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    const ctx = document.getElementById('myChart').getContext('2d');
 const myChart = new Chart(ctx, {
     type: 'bar',
     data: {
@@ -115,30 +136,7 @@ let chart = new Chart(ctx, {
         }
     }
 });
-            </script>
-          </canvas>
-          <hr>
-        </div>
-
-        <div class="upper-box total-box |">
-
-          <div class="my-balance">
-            <h3 class="balance-title | fs-400 fw-400 text-neutral-600">Total this month</h3>
-            <p class="balance-value  | fs-900 fw-700">$478.33</p>
-          </div>
-
-          <div class="result">
-            <h4 class="text-align-right fw-700">+2.4%</h4>
-            <p class="fw-400 text-neutral-600">from last month</p>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </div>
-  <script type="module" src="/main.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <!-- <script src="chart.js"></script> -->
+  </script>
 </body>
 
 </html> 
