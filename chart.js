@@ -25,39 +25,39 @@ const myChart = new Chart(ctx, {
             'hsl(10, 79%, 65%)'
             ],
             // To design the bars..radius and thickness of them
-            borderRadius: 4,
-			barThickness: 38,
-			hoverBackgroundColor: [
-				"hsl(10, 80%, 74%)",
-				"hsl(10, 80%, 74%)",
-				"hsl(186, 61%, 74%)",
-				"hsl(10, 80%, 74%)",
-				"hsl(10, 80%, 74%)",
-				"hsl(10, 80%, 74%)",
-				"hsl(10, 80%, 74%)",
-			],
+            borderRadius: 3,
+            barThickness: 38,
+            hoverBackgroundColor: [
+                "hsl(10, 80%, 74%)",
+                "hsl(10, 80%, 74%)",
+                "hsl(186, 61%, 74%)",
+                "hsl(10, 80%, 74%)",
+                "hsl(10, 80%, 74%)",
+                "hsl(10, 80%, 74%)",
+                "hsl(10, 80%, 74%)",
+            ],
+            borderWidth: 0
         }]
     },
     options: {
         scales: {
-            // Remove X-axis lines
-            x: {
-                display: false,
+            // Remove x-axis lines
+            x:{
+                display: false
             },
-            // Remove Y-axis lines
+            // Remove y-axis lines
             y: {
                 display: false,
                 beginAtZero: true
+            },
+        },
+        onHover: (event,chartElement) => {
+            if(chartElement.length===0){
+                event.native.target.style.cursor = "default";
+            } else{
+                event.native.target.style.cursor = "pointer";
             }
         },
-        // Change the cursor to pointer on hover but if the bar is of length == 0 then it doesnt change
-        onHover: (event, chartElement) => {
-			if (chartElement.length === 0) {
-				event.native.target.style.cursor = "default";
-			} else {
-				event.native.target.style.cursor = "pointer";
-			}
-		},
     }
 });
 
