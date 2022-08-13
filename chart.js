@@ -61,23 +61,23 @@ const myChart = new Chart(ctx, {
     }
 });
 
-// For font size and family of the chart
+// // For font size and family of the chart
 
-Chart.defaults.font.size = 16;
-Chart.defaults.font.family = 'DM Sans', sans-serif;
-let chart = new Chart(ctx, {
-    type: 'line',
-    data: data,
-    options: {
-        plugins: {
-            legend: {
-                labels: {
-                    // This more specific font property overrides the global property
-                    font: {
-                        size: 14
-                    }
-                }
-            }
-        }
-    }
-});
+// Chart.defaults.font.size = 16;
+// Chart.defaults.font.family = 'DM Sans', sans-serif;
+// let chart = new Chart(ctx, {
+//     type: 'line',
+//     data: data,
+//     options: {
+//         plugins: {
+//             legend: {
+//                 labels: {
+//                     // This more specific font property overrides the global property
+//                     font: {
+//                         size: 14
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// });

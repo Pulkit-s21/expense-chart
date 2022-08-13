@@ -212,7 +212,7 @@ select {
 }
 
 .padding-400{
-  padding: var(--size-400);
+  padding: var(--size-800);
 }
 
 .padding-inline-400{
